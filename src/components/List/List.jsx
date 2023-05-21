@@ -7,6 +7,7 @@ import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 // import { handleRemoveContact } from '../../redux/contacts/item';
 import { deleteContact } from 'redux/contacts/operations';
+import { selectFilteredContacts } from 'redux/contacts/selectors';
 
 export const ContactList = () => {
   // const contacts = useSelector(state => state.contacts.items);
@@ -18,6 +19,8 @@ export const ContactList = () => {
   //   );
   // const filterContact = isVisibleContacts();
   // const dispatch = useDispatch();
+  const filteredContacts = useSelector(selectFilteredContacts);
+
   const dispatch = useDispatch();
 
   function removeContact(id) {
@@ -25,7 +28,7 @@ export const ContactList = () => {
   }
   return (
     <ul className={css.list}>
-      {filterContact.map(({ id, name, number }) => {
+      {filteredContacts.map(({ id, name, number }) => {
         return (
           <li className={css.item} key={id}>
             {name}: {number}
