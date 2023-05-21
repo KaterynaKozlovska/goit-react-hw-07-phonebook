@@ -9,7 +9,7 @@ import { filterSlice } from './contacts/filter';
 // const persistConfig = {
 //   key: 'root',
 //   storage,
-//   whitelist: ['contacts'],
+//   whiteList: ['contacts'],
 // };
 
 // const persistedReducer = persistReducer(persistConfig, rootReducer);
