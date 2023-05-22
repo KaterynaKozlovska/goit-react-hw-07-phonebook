@@ -110,8 +110,13 @@ export default function App() {
       </section>
       <section className={css.section}>
         <h2 className={css.title}>Contacts</h2>
-        <Filter />
-        <ContactList />
+        {contactsItems.length !==
+          0(
+            <>
+              <Filter />
+              <ContactList />
+            </>
+          )}
       </section>
     </div>
   );
