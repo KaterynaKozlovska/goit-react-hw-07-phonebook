@@ -57,3 +57,5 @@ const extraActions = [fetchContacts, saveContact, deleteContact];
 const getActions = type => extraActions.map(action => action[type]);
 
 export const contactsReducer = contactsSlice.reducer;
+
+export default contactsReducer;

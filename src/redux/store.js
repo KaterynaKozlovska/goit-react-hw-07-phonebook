@@ -25,8 +25,6 @@ import { filterSlice } from './contacts/filter';
 // });
 
 // export const persistor = persistStore(store);
-const store = configureStore({
+export const store = configureStore({
   reducer: { contacts: contactsReducer, filter: filterSlice.reducer },
 });
-
-export { store };
