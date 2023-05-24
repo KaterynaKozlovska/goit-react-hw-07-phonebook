@@ -1,15 +1,3 @@
-// import { combineReducers } from 'redux';
-
-// import items from './item';
-// import filter from './filter';
-
-// const contactsReducer = combineReducers({
-//   items,
-//   filter,
-// });
-
-// export default contactsReducer;
-
 import { createSlice, isAnyOf } from '@reduxjs/toolkit';
 import { fetchContacts, saveContact, deleteContact } from './operations';
 
@@ -57,5 +45,3 @@ const extraActions = [fetchContacts, saveContact, deleteContact];
 const getActions = type => extraActions.map(action => action[type]);
 
 export const contactsReducer = contactsSlice.reducer;
-
-export default contactsReducer;
