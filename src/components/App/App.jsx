@@ -11,6 +11,7 @@ import {
 } from '../../redux/contacts/selectors';
 import { fetchContacts } from '../../redux/contacts/operations';
 import { toast } from 'react-toastify';
+import { TailSpin } from 'react-loader-spinner';
 
 function App() {
   const contactsItems = useSelector(selectContactsItems);
@@ -35,7 +36,7 @@ function App() {
 
   return (
     <div className={css.container}>
-      {isLoading}
+      {isLoading && <TailSpin color="navy" />}
       <section className={css.section}>
         <h1 className={css.title}>Phonebook</h1>
         <ContactForm />
