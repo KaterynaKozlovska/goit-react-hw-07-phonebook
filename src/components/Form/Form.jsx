@@ -1,5 +1,4 @@
 import css from './Form.module.css';
-import PropTypes from 'prop-types';
 
 import { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
@@ -103,8 +102,4 @@ export const ContactForm = () => {
       </button>
     </form>
   );
-};
-
-ContactForm.propTypes = {
-  onSubmit: PropTypes.func,
 };
